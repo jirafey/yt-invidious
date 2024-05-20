@@ -9,4 +9,12 @@
 5. Download the `yt-ind.xpi` file
 6. Install Add-On from File... 
 7. Choose the `yt-ind.xpi` file
+
+
+![image](https://github.com/jirafey/yt-invidious/assets/97115044/5e4dcffa-de98-4d92-bee7-035229e8a71e)
+
+
+![image](https://github.com/jirafey/yt-invidious/assets/97115044/3519b609-9498-4f6e-8e0e-d88913cd9e1d)
+
+
 8. And voilà, it's installed.
