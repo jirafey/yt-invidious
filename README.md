@@ -5,6 +5,7 @@
 4. Go to extensions -> Manage extensions -> Click on the settings gear icon
 
 ![image](https://github.com/jirafey/yt-invidious/assets/97115044/09523f73-9d46-473d-aee1-a54527304560)
+
 5. Download the `yt-ind.xpi` file
 6. Install Add-On from File... 
 7. Choose the `yt-ind.xpi` file
