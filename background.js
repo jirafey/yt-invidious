@@ -1,5 +1,15 @@
-// Define the domain to replace with
-const replacewith = "invidious.lunar.icu";
+// Initialize with a default instance
+let invidiousInstance = 'invidious.lunar.icu';
+
+// Load the user-defined instance URL
+function loadInvidiousInstance() {
+  browser.storage.sync.get('instanceUrl', function(data) {
+    if (data.instanceUrl) {
+      invidiousInstance = data.instanceUrl;
+      console.log('Invidious instance set to:', invidiousInstance);
+    }
+  });
+}
 
 // Construct the URLs array dynamically
 const urlsToRedirect = [
@@ -18,7 +28,7 @@ function redirect(requestDetails) {
   let newUrl = null;
 
   if (urlsToRedirect.includes(url.hostname)) {
-    newUrl = url.href.replace(url.hostname, replacewith);
+    newUrl = url.href.replace(url.hostname, invidiousInstance);
   }
 
   if (newUrl !== null) {
@@ -39,3 +49,9 @@ browser.webRequest.onBeforeRequest.addListener(
   },
   ["blocking"]
 );
+
+// Initial load of the instance
+loadInvidiousInstance();
+
+// Reload instance when storage changes
+browser.storage.onChanged.addListener(loadInvidiousInstance);
