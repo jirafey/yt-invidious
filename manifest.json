@@ -6,6 +6,7 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "storage",
     "*://www.youtube.com/*",
     "*://youtu.be/*"
   ],
@@ -20,5 +21,9 @@
       "id": "some@example.com",
       "strict_min_version": "1.2.3"
     }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
   }
 }
